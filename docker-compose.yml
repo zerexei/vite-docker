@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  client:
+    build:
+      # context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - .:/home/node/app
+      - node_modules:/home/node/app/node_modules
+
+    ports:
+      - '8000:8000'
+
+volumes:
+  node_modules:
